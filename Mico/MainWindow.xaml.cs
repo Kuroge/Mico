@@ -47,6 +47,7 @@ namespace Mico
             }
             process.StartInfo = startInfo;
             process.Start();
+            ByeLabel.Content = "¡Buenas noches!";
         }
 
         private void Cancel_Click(object sender, RoutedEventArgs e)
@@ -58,6 +59,8 @@ namespace Mico
             startInfo.Arguments = $"/C shutdown -a";
             process.StartInfo = startInfo;
             process.Start();
+            ByeLabel.Content = ":(";
+
         }
     }
 }
