@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Mico")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Hewlett-Packard Company")]
+[assembly: AssemblyCompany("Cheyen García Riera")]
 [assembly: AssemblyProduct("Mico")]
-[assembly: AssemblyCopyright("Copyright © Hewlett-Packard Company 2018")]
+[assembly: AssemblyCopyright("Cheyen García Riera")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -24,5 +24,40 @@ namespace Mico
         {
             InitializeComponent();
         }
+
+        private void TimeSet_Click(object sender, RoutedEventArgs e)
+        {
+            int time;
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            if (TimeType.Text.Equals("Horas"))
+            {
+                time = Convert.ToInt32(Time.Text) * 3600;
+                startInfo.Arguments = $"/C shutdown -s -t {time.ToString()}";
+            }else if (TimeType.Text.Equals("Minutos"))
+            {
+                time = Convert.ToInt32(Time.Text) * 60;
+                startInfo.Arguments = $"/C shutdown -s -t {time.ToString()}";
+            }
+            else
+            {
+                startInfo.Arguments = $"/C shutdown -s -t {Time.Text}";
+            }
+            process.StartInfo = startInfo;
+            process.Start();
+        }
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process process = new System.Diagnostics.Process();
+            System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+            startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+            startInfo.FileName = "cmd.exe";
+            startInfo.Arguments = $"/C shutdown -a";
+            process.StartInfo = startInfo;
+            process.Start();
+        }
     }
 }
