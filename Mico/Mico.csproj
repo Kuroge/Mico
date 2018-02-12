@@ -140,5 +140,8 @@
   <ItemGroup>
     <Resource Include="face.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\pointer.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,15 +11,27 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <ComboBox x:Name="TimeType" IsReadOnly="True" Margin="5, 0, 5, 0" Height="22" Grid.Column="0">
+        <Image x:Name="_1_Copy" HorizontalAlignment="Left" Height="394" Margin="154,10,-16,-82" VerticalAlignment="Top" Width="211" Source="Resources/pointer.jpg" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.ColumnSpan="2" IsEnabled="False"/>
+
+        <Image x:Name="_1" HorizontalAlignment="Left" Height="394" Margin="0,25,0,-97" VerticalAlignment="Top" Width="201" Source="Resources/pointer.jpg" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label x:Name="ByeLabel" Content="" HorizontalAlignment="Left" Height="35" Margin="0,222,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1" HorizontalContentAlignment="Center"/>
+        <ComboBox x:Name="TimeType" IsReadOnly="True" Margin="9,24,0,276" Height="22" Grid.Column="1">
             <ComboBoxItem Content="Horas" IsSelected="True"/>
             <ComboBoxItem Content="Minutos"/>
             <ComboBoxItem Content="Segundos"/>
         </ComboBox>
-        <TextBox x:Name="Time" Grid.Column="1" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Width="120" UndoLimit="2"/>
-        <Button x:Name="TimeSet" Grid.Column="2" Content="Programar" HorizontalAlignment="Left" Height="22" Width="75" IsDefault="True" Click="TimeSet_Click"/>
-        <Button x:Name="Cancel" Content="Cancelar" Grid.Column="2" HorizontalAlignment="Left" Margin="0,177,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="Cancel_Click"/>
-        <Label x:Name="ByeLabel" Content="" HorizontalAlignment="Left" Height="35" Margin="0,222,0,0" VerticalAlignment="Top" Width="174" Grid.Column="1" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="Time" Grid.Column="1" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" Width="120" UndoLimit="2" Margin="29,83,0,217"/>
+        <Button x:Name="TimeSet" Grid.Column="1" Content="Programar" HorizontalAlignment="Left" Height="22" Width="75" IsDefault="True" Click="TimeSet_Click" Margin="51,148,0,152"/>
+        <Button x:Name="Cancel" Content="Cancelar" Grid.Column="1" HorizontalAlignment="Left" Margin="51,185,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Click="Cancel_Click"/>
 
     </Grid>
 </Window>
