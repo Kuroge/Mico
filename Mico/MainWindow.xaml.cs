@@ -62,5 +62,12 @@ namespace Mico
             ByeLabel.Content = ":(";
 
         }
+
+        private void TimeType_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            _1.Visibility = Visibility.Hidden;
+            _2.Visibility = Visibility.Visible;
+            
+        }
     }
 }
